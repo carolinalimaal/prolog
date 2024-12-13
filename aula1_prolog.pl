@@ -38,12 +38,10 @@ irma(X, Y) :- gerou(Z, X),
     			X \== Y.
 
 tio(X, Y) :- irmao(X, Z),
-    			gerou(Z, Y),
-    			homem(X).
+    			gerou(Z, Y).
     
 tia(X, Y) :- irma(X, Z),
-    			gerou(Z, Y),
-    			mulher(X).
+    			gerou(Z, Y).
 
 avô(X,Y) :- pai(X,Z),
     		gerou(Z,Y).
@@ -53,18 +51,5 @@ avó(X,Y) :- mae(X,Z),
     
 casal(X,Y) :- pai(X,Z), mae(Y,Z).
     
-feliz(X) :- gerou(X, Y).
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+feliz(X) :- gerou(X, _Y).
+
